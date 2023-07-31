@@ -36,8 +36,149 @@
 	border-top: 2px solid #f5bd41;
 }
 
-.offerings {
-	padding-top: 80px;
+/*header-block*/
+
+.header-section {
+	height: 100vh;
+	background-image: url("../images/header/background.svg");
+	background-size: cover;
+}
+
+.top-line {
+	padding-top: 50px;
+	padding-bottom: 200px;
+}
+
+.logo {
+	width: 205px;
+	height: 40px;
+	background-image: url("../images/header/sprite.png");
+}
+
+.navigation {
+	font-size: 24px;
+	color: #ffffff;
+	display: flex;
+	gap: 48px;
+}
+
+.header-links:hover {
+	text-decoration: underline #f5bd41 3px;
+	text-underline-offset: 12px;
+}
+
+.navigation-comm {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.night {
+	width: 30px;
+	height: 30px;
+	background-image: url("../images/header/sprite.png");
+	background-position: -205px;
+}
+
+.account {
+	width: 40px;
+	height: 40px;
+	background-image: url("../images/header/sprite.png");
+	background-position: -235px;
+}
+
+.motto {
+	font-weight: 500;
+	font-size: 50px;
+	color: #ffffff;
+	padding-top: unset;
+	padding-bottom: 145px;
+}
+
+.search-description {
+	font-size: 18px;
+	color: #ffffff;
+	position: absolute;
+	top: -46px;
+	left: 24px;
+}
+
+.search-form {
+	width: 1232px;
+	padding: unset;
+	border-radius: 8px;
+	background-color: #ffffff;
+}
+
+.form-position {
+	position: relative;
+}
+
+.filter-comm {
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	max-height: 64px;
+	padding: 22px 24px 22px 24px;
+	appearance: none;
+}
+
+.filter-comm:hover {
+	border-radius: 8px;
+	outline: 3px solid #f5bd41;
+	outline-offset: -3px;
+}
+
+.city-search {
+	width: 100%;
+}
+
+#date1 {
+	width: 260px;
+}
+
+.persons {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.butt-search {
+	background-color: #3077c6;
+	border-radius: 8px;
+	color: white;
+	font-weight: 500;
+	font-size: 24px;
+	padding: 20px 57px;
+	border: unset;
+	line-height: 24px;
+}
+
+.downloads {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+}
+
+.google {
+	height: 40px;
+	width: 135px;
+	background-position: -275px;
+	background-image: url("../images/header/sprite.png");
+}
+
+.apple {
+	height: 40px;
+	width: 120px;
+	background-position: -410px;
+	background-image: url("../images/header/sprite.png");
+}
+
+/*offerring-block*/
+
+.offerings-section {
+	padding-top: 120px;
 }
 
 .offerings-elements {

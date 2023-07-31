@@ -1,83 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Main</title>
-		<link rel="stylesheet" href="./styles/trip-house-styles.css" />
-		<link rel="stylesheet" href="./styles/fonts.css" />
-	</head>
-	<body>
-		<section class="offerings-section">
-			<div class="container">
-				<div class="offerings-block">
-					<p class="page-title">What do we offer</p>
-					<hr class="highlight" />
-					<div class="offerings comm-block">
-						<div class="offerings-elements">
-							<img
-								class="offerings-img"
-								src="images/trip-house/headset-outlined.png"
-								alt="support"
-							/><span class="offerings-caption">Support 24/7</span>
-						</div>
-						<div class="offerings-elements">
-							<img
-								class="offerings-img"
-								src="images/trip-house/forum-outlined.png"
-								alt="communication"
-							/><span class="offerings-caption">Communicate directly</span>
-						</div>
-						<div class="offerings-elements">
-							<img
-								class="offerings-img"
-								src="images/trip-house/devices-outlined.png"
-								alt="book-online"
-							/>
-							<span class="offerings-caption">Book online</span>
-						</div>
+<head>
+	<meta charset="UTF-8" />
+	<title>Main</title>
+	<link rel="stylesheet" href="./styles/trip-house-styles.css" />
+	<link rel="stylesheet" href="./styles/fonts.css" />
+</head>
+<body>
+<section class="header-section">
+	<div class="container">
+		<div class="top-line comm-block">
+			<div class="logo">
+				<!--						<img src="./images/logo.png" alt="trip_house" />-->
+			</div>
+			<div class="navigation">
+				<div class="left-part navigation-comm">
+					<p class="header-links">Stays</p>
+					<p class="header-links">Attractions</p>
+				</div>
+				<div class="right-part navigation-comm">
+					<div class="night"></div>
+					<div class="account"></div>
+					<!--							<img src="./images/night.png" alt="" />-->
+					<!--							<img src="./images/account.png" alt="" />-->
+				</div>
+			</div>
+		</div>
+		<div class="motto comm-block">
+			<p>
+				Discover stays <br />
+				to live, work or just relax
+			</p>
+		</div>
+		<form class="search-form comm-block" action="" method="get">
+			<div class="city-search form-position">
+				<label class="search-description" for="city-search"
+				>Your destination or hotel name</label
+				>
+				<input
+						type="text"
+						class="filter-comm"
+						id="city-search"
+						name="city"
+						placeholder="City"
+				/>
+			</div>
+			<div class="date-block form-position">
+				<label class="search-description" for="date1"
+				>Check-in — Check-out</label
+				>
+				<input type="date" class="filter-comm" name="date" id="date1" />
+			</div>
+			<div class="persons">
+				<select name="adults" class="filter-comm" id="adults">
+					<option value="1" selected disabled>Adults</option>
+					<option value="1">1 Adult</option>
+					<option value="2">2 Adults</option>
+					<option value="3">3 Adults</option>
+				</select>
+				<span>—</span>
+				<select name="children" class="filter-comm" id="children">
+					<option value="2" selected disabled>Children</option>
+					<option value="1">1 Child</option>
+					<option value="2">2 Children</option>
+					<option value="3">3 Children</option>
+				</select>
+				<span>—</span>
+				<select name="room" class="filter-comm" id="room">
+					<option value="1" selected disabled>Rooms</option>
+					<option value="1">1 Room</option>
+					<option value="2">2 Rooms</option>
+					<option value="3">3 Rooms</option>
+				</select>
+			</div>
+			<button type="submit" class="butt-search">Search</button>
+		</form>
+		<div class="downloads comm-block">
+			<div class="google"></div>
+			<div class="apple"></div>
+		</div>
+	</div>
+</section>
+<section class="offerings-section">
+	<div class="container">
+		<div class="offerings-block">
+			<p class="page-title">What do we offer</p>
+			<hr class="highlight" />
+			<div class="offerings comm-block">
+				<div class="offerings-elements">
+					<img
+							class="offerings-img"
+							src="images/offerings/headset-outlined.png"
+							alt="support"
+					/><span class="offerings-caption">Support 24/7</span>
+				</div>
+				<div class="offerings-elements">
+					<img
+							class="offerings-img"
+							src="images/offerings/forum-outlined.png"
+							alt="communication"
+					/><span class="offerings-caption">Communicate directly</span>
+				</div>
+				<div class="offerings-elements">
+					<img
+							class="offerings-img"
+							src="images/offerings/devices-outlined.png"
+							alt="book-online"
+					/>
+					<span class="offerings-caption">Book online</span>
+				</div>
 
-						<div class="offerings-elements">
-							<img
-								class="offerings-img"
-								src="images/trip-house/thumb-up-outlined.png"
-								alt="reviews"
-							/><span class="offerings-caption">Real guest reviews</span>
-						</div>
-					</div>
+				<div class="offerings-elements">
+					<img
+							class="offerings-img"
+							src="images/offerings/thumb-up-outlined.png"
+							alt="reviews"
+					/><span class="offerings-caption">Real guest reviews</span>
 				</div>
 			</div>
-		</section>
-		<section class="footer-section">
-			<div class="container">
-				<div class="footer footer-background">
-					<div class="links-block comm-block">
-						<div class="links-col">
-							<p class="links-title">About</p>
-							<p>How Triphouse works</p>
-							<p>Careers</p>
-							<p>Privacy</p>
-							<p>Terms</p>
-						</div>
-						<div class="links-col">
-							<p class="links-title">Property types</p>
-							<p>Guest houses</p>
-							<p>Hotels</p>
-							<p>Apartments</p>
-							<p>Villas</p>
-							<p>Holiday homes</p>
-							<p>Hostels</p>
-						</div>
-						<div class="links-col">
-							<p class="links-title">Support</p>
-							<p>Contact Customer Service</p>
-							<p>FAQ</p>
-						</div>
-					</div>
-					<div class="rights comm-block">
-						© 2022Triphouse, Inc. All rights reserved
-					</div>
+		</div>
+	</div>
+</section>
+<section class="footer-section">
+	<div class="container">
+		<div class="footer footer-background">
+			<div class="links-block comm-block">
+				<div class="links-col">
+					<p class="links-title">About</p>
+					<p>How Triphouse works</p>
+					<p>Careers</p>
+					<p>Privacy</p>
+					<p>Terms</p>
+				</div>
+				<div class="links-col">
+					<p class="links-title">Property types</p>
+					<p>Guest houses</p>
+					<p>Hotels</p>
+					<p>Apartments</p>
+					<p>Villas</p>
+					<p>Holiday homes</p>
+					<p>Hostels</p>
+				</div>
+				<div class="links-col">
+					<p class="links-title">Support</p>
+					<p>Contact Customer Service</p>
+					<p>FAQ</p>
 				</div>
 			</div>
-		</section>
-	</body>
+			<div class="rights comm-block">
+				© 2022Triphouse, Inc. All rights reserved
+			</div>
+		</div>
+	</div>
+</section>
+</body>
 </html>
