@@ -2,32 +2,33 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Main</title>
 		<link rel="stylesheet" href="./styles/trip-house-styles.css" />
 		<link rel="stylesheet" href="./styles/fonts.css" />
 		<link rel="icon" href="./images/icons/icon.ico" />
 	</head>
 	<body>
-		<section class="main off">
+		<section class="main">
 			<div class="container">
 				<div class="header content">
-					<div class="header__logo">
-						<svg width="205" height="40">
-							<use href="./images/svg-sprite.svg#logo" />
-						</svg>
-					</div>
+					<svg class="header__logo" width="205" height="40">
+						<use href="./images/svg-sprite.svg#logo" />
+					</svg>
 					<div class="header__navbar">
 						<div class="header__navbar-left navbar__common">
 							<p class="header__links">Stays</p>
 							<p class="header__links">Attractions</p>
 						</div>
 						<div class="header__navbar-right navbar__common">
-							<svg width="30" height="30">
+							<svg class="svg-night" width="30" height="30">
 								<use href="./images/svg-sprite.svg#night" />
 							</svg>
-							<svg width="40" height="40">
+							<svg class="svg-account" width="40" height="40">
 								<use href="./images/svg-sprite.svg#account" />
+							</svg>
+							<svg class="svg-menu" width="24" height="16">
+								<use href="./images/svg-sprite.svg#menu" />
 							</svg>
 						</div>
 					</div>
@@ -51,26 +52,54 @@
 							placeholder="City"
 						/>
 					</div>
+
 					<div class="filter__element-date">
-						<label class="filter__label" for="date">Check-in — Check-out</label>
-						<input type="date" class="filter__element" name="date" id="date" />
+						<label class="filter__label" for="date-in"
+							>Check-in — Check-out</label
+						>
+						<input
+							type="date"
+							class="filter__element"
+							name="date"
+							id="date-in"
+						/>
+						<input
+							type="date"
+							class="filter__element"
+							name="date"
+							id="date-out"
+						/>
 					</div>
 					<div class="filter__element-persons">
-						<select name="adults" class="filter__element" id="adults">
+						<select
+							name="adults"
+							class="filter__element filter__element-p"
+							id="adults"
+						>
 							<option value="1" selected disabled>Adults</option>
 							<option value="1">1 Adult</option>
 							<option value="2">2 Adults</option>
 							<option value="3">3 Adults</option>
 						</select>
-						<span>—</span>
-						<select name="children" class="filter__element" id="children">
+						<span class="filter__element-separate-h">—</span>
+						<div class="filter__element-separate-v"></div>
+						<select
+							name="children"
+							class="filter__element filter__element-p"
+							id="children"
+						>
 							<option value="2" selected disabled>Children</option>
 							<option value="1">1 Child</option>
 							<option value="2">2 Children</option>
 							<option value="3">3 Children</option>
 						</select>
-						<span>—</span>
-						<select name="rooms" class="filter__element" id="room">
+						<span class="filter__element-separate-h">—</span>
+						<div class="filter__element-separate-v"></div>
+						<select
+							name="rooms"
+							class="filter__element filter__element-p"
+							id="room"
+						>
 							<option value="1" selected disabled>Rooms</option>
 							<option value="1">1 Room</option>
 							<option value="2">2 Rooms</option>
