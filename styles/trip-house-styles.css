@@ -11,12 +11,13 @@
 :root {
 	--container-width: 1264px;
 	--selection-colour: #f5bd41;
-	--main-colour: #3077c6;
-	--footer-main-colour: #10367c;
-	--text-main-colour: #383838;
+	--accent-blue: #3077c6;
+	--general-blue: #10367c;
+	--text-main: #383838;
+	--text-secodary: #bfbfbf;
+	--bg-colour: #eaf0f9;
 	--white: #ffffff;
 	--black: #000000;
-
 }
 
 .container {
@@ -32,19 +33,29 @@
 }
 
 .title {
-	margin-bottom: 20px;
+	position: relative;
+	padding-top: 120px;
+	padding-bottom: 120px;
 	text-align: center;
 	font-size: 40px;
-	color: var(--text-main-colour);
+	color: var(--text-main);
 	font-weight: 500;
 }
 
-.highlight {
+.title::after {
+	display: inline-block;
+	content: '';
+	position: absolute;
+	bottom: 100px;
+	left: calc(50% - 50px);
 	width: 100px;
-	margin: 0 auto;
-	border: none;
-	border-bottom: 2px solid var(--selection-colour);
-	border-top: 2px solid var(--selection-colour);
+	height: 4px;
+	background: var(--selection-colour);
+	opacity: 0;
+}
+
+.title:hover::after {
+	opacity: 1;
 }
 
 .col-1 {
@@ -95,7 +106,7 @@
 .header {
 	padding-top: 50px;
 	padding-bottom: 200px;
-	fill: var(--main-colour);
+	fill: var(--accent-blue);
 }
 
 .header__navbar {
@@ -105,9 +116,23 @@
 	gap: 48px;
 }
 
-.header__links:hover {
-	text-decoration: underline var(--selection-colour) 3px;
-	text-underline-offset: 12px;
+.header__links {
+	position: relative;
+}
+
+.header__links:after {
+	content: '';
+	position: absolute;
+	bottom: -12px;
+	left: calc(50% - 25px);
+	width: 50px;
+	height: 4px;
+	background: var(--selection-colour);
+	opacity: 0;
+}
+
+.header__links:hover::after {
+	opacity: 1;
 }
 
 .navbar__common {
@@ -150,7 +175,7 @@
 	font-size: 18px;
 	appearance: none;
 	height: 100%;
-	color: var(--text-main-colour);
+	color: var(--text-main);
 }
 
 .filter__element:focus {
@@ -206,7 +231,7 @@
 
 .filter__btn {
 	grid-column: 4;
-	background-color: var(--main-colour);
+	background-color: var(--accent-blue);
 	border-radius: 8px;
 	color: var(--white);
 	font-weight: 500;
@@ -224,13 +249,7 @@
 
 /*offering-section*/
 
-.offerings {
-	padding-top: 120px;
-	padding-bottom: 120px;
-}
-
 .offerings__row {
-	padding-top: 80px;
 	flex-wrap: wrap;
 }
 
@@ -251,7 +270,83 @@
 	text-align: center;
 	padding-top: 48px;
 	font-size: 24px;
-	color: var(--text-main-colour);
+	color: var(--text-main);
+	padding-bottom: 120px;
+}
+/*homes-section*/
+
+.homes {
+	background-color: var(--bg-colour);
+	padding-bottom: 120px;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.homes__row {
+	display: flex;
+	justify-content: space-between;
+	color: var(--accent-blue);
+	position: relative;
+}
+.homes__photo-arrow {
+	max-height: 296px;
+	position: relative;
+}
+
+.arrow:after {
+	content: '';
+	position: absolute;
+	right: -4.5px;
+	top: calc(50% - 6px);
+	width: 10px;
+	height: 10px;
+	border: 2px solid var(--text-main);
+	border-radius: 1px;
+	border-left: 0;
+	border-top: 0;
+	transform: rotate(315deg);
+}
+
+.arrow:before {
+	content: '';
+	position: absolute;
+	right: -20px;
+	top: calc(50% - 20px);
+	background: #f3f3f4;
+	box-shadow: 0 4px 4px 0 rgb(0 0 0/ 0.25);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.arrow-mob {
+	display: none;
+}
+
+.homes__col {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding: 0 8px;
+}
+
+.homes__col:first-child {
+	padding-left: unset;
+}
+
+.homes__col:last-child {
+	padding-right: unset;
+}
+
+.homes__photo {
+	width: 100%;
+	max-width: 296px;
+	aspect-ratio: 1 / 1;
+}
+
+.country {
+	color: var(--text-secodary);
 }
 
 /*footer-section*/
@@ -260,7 +355,7 @@
 	color: var(--white);
 	font-weight: 400;
 	max-width: 100vw;
-	background-color: var(--footer-main-colour);
+	background-color: var(--general-blue);
 	padding-top: 120px;
 	padding-bottom: 120px;
 }
@@ -307,6 +402,7 @@
 
 	.title {
 		font-size: 1.75rem;
+		padding: 40px 0 30px 0;
 		margin: unset;
 	}
 
@@ -384,7 +480,7 @@
 
 	.filter__element-separate-v {
 		display: unset;
-		border-left: 1px solid #bfbfbf;
+		border-left: 1px solid var(--text-secodary);
 		height: 32px;
 	}
 
@@ -417,12 +513,7 @@
 	/*offerings-section*/
 
 	.offerings {
-		padding-top: 24px;
 		padding-bottom: 40px;
-	}
-
-	.offerings__row {
-		padding-top: 32px;
 	}
 
 	.offerings__col:not(:last-child) {
@@ -439,8 +530,53 @@
 	}
 
 	.offerings__caption {
-		padding-top: 16px;
+		padding: 16px 0 0 0;
 		font-size: 15px;
+	}
+
+	/*homes-section*/
+
+	.homes {
+		padding-bottom: 40px;
+		font-size: 12px;
+	}
+
+	.homes__col:nth-child(n + 3) {
+		display: none;
+	}
+
+	.homes__col {
+		width: fit-content;
+		margin: 0 auto;
+		gap: 8px;
+		padding: unset;
+	}
+
+	.homes__photo {
+		max-width: 156px;
+		aspect-ratio: 1 / 1;
+	}
+
+	.arrow-mob {
+		display: unset;
+	}
+
+	.arrow:after {
+		width: 7px;
+		height: 7px;
+		right: -3px;
+		top: calc(50% - 4.5px);
+	}
+
+	.arrow:before {
+		width: 28px;
+		height: 28px;
+		top: calc(50% - 14px);
+		right: -14px;
+	}
+
+	.country {
+		margin-top: -4px;
 	}
 
 	/*footer-section*/
