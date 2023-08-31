@@ -16,6 +16,7 @@
 	--text-main: #383838;
 	--text-secodary: #bfbfbf;
 	--bg-colour: #eaf0f9;
+	--stroke-colour: #f3f3f4;
 	--white: #ffffff;
 	--black: #000000;
 }
@@ -54,8 +55,18 @@
 	opacity: 0;
 }
 
-.title:hover::after {
+.container:hover > .title::after {
 	opacity: 1;
+	animation: expand-width 0.2s cubic-bezier(0.42, 0, 0.04, 0.99);
+}
+
+@keyframes expand-width {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
 }
 
 .col-1 {
@@ -133,6 +144,7 @@
 
 .header__links:hover::after {
 	opacity: 1;
+	animation: expand-width 0.2s cubic-bezier(0.42, 0, 0.04, 0.99);
 }
 
 .navbar__common {
@@ -280,73 +292,164 @@
 	padding-bottom: 120px;
 	font-size: 24px;
 	font-weight: 400;
+	color: var(--accent-blue);
 }
 
 .homes__row {
 	display: flex;
 	justify-content: space-between;
-	color: var(--accent-blue);
-	position: relative;
 }
-.homes__photo-arrow {
-	max-height: 296px;
+
+.homes__col {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding-right: 16px;
+	width: fit-content;
+}
+
+.homes__col:last-child {
+	padding: unset;
+}
+
+.homes__col__photo {
 	position: relative;
 }
 
-.arrow:after {
-	content: '';
-	position: absolute;
-	right: -4.5px;
-	top: calc(50% - 6px);
-	width: 10px;
-	height: 10px;
-	border: 2px solid var(--text-main);
-	border-radius: 1px;
-	border-left: 0;
-	border-top: 0;
-	transform: rotate(315deg);
+.homes__col__photo-png {
+	width: 100%;
+	max-width: 295px;
+	height: 100%;
+	max-height: 295px;
+	aspect-ratio: 1 / 1;
 }
 
-.arrow:before {
-	content: '';
+.homes__caption {
+	color: var(--text-secodary);
+	max-width: 295px;
+	width: 100%;
+}
+
+.arrow-svg {
 	position: absolute;
-	right: -20px;
-	top: calc(50% - 20px);
-	background: #f3f3f4;
-	box-shadow: 0 4px 4px 0 rgb(0 0 0/ 0.25);
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
+	right: -24px;
+	top: calc(50% - 24px);
+	transform: rotate(-90deg);
 }
 
 .arrow-mob {
 	display: none;
 }
 
-.homes__col {
-	width: 100%;
+/*destinations-section*/
+
+.destinations {
+	font-size: 24px;
+	color: var(--accent-blue);
+}
+
+.destination__controls {
+	width: fit-content;
 	display: flex;
+	border-radius: 8px;
+	background-color: var(--stroke-colour);
+	color: var(--black);
+	margin-bottom: 64px;
+}
+
+.destination__controls__btn {
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+	appearance: none;
+	border: none;
+	padding: 17px 25px;
+	border-radius: 8px;
+}
+
+.destination__controls__btn:focus {
+	background-color: var(--accent-blue);
+	color: var(--white);
+}
+
+.destination__row {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.destination__col {
+	display: flex;
+	width: fit-content;
 	flex-direction: column;
-	gap: 24px;
-	padding: 0 8px;
+	max-width: fit-content;
+	padding: 0 16px 48px 0;
 }
 
-.homes__col:first-child {
-	padding-left: unset;
-}
-
-.homes__col:last-child {
+.destination__col:last-child {
 	padding-right: unset;
 }
 
-.homes__photo {
+.destination__col__img {
 	width: 100%;
-	max-width: 296px;
+	max-width: 295px;
+	height: 100%;
+	max-height: 295px;
 	aspect-ratio: 1 / 1;
 }
 
-.country {
-	color: var(--text-secodary);
+.destinations-caption {
+	padding-top: 24px;
+	max-width: min-content;
+}
+
+.destination__img__expand {
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 48px;
+}
+
+.arrow-destination {
+	position: unset;
+	transform: rotate(0deg);
+}
+
+
+.login {
+	display: flex;
+	background-color: var(--bg-colour);
+	justify-content: space-between;
+}
+
+.login-img {
+	padding: 57px 24px;
+}
+
+.login__discount {
+	display: flex;
+	flex-direction: column;
+	gap: 21px;
+	padding: 51px 0;
+	width: 100%;
+}
+
+.sign-up-btn {
+	appearance: none;
+	border-radius: 8px;
+	background-color: var(--white);
+	width: 128px;
+	height: 48px;
+	border: 1px solid var(--accent-blue);
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color: var(--accent-blue);
+}
+
+.cross {
+	padding: 24px;
+}
+
+.login-mob {
+	display: none;
 }
 
 /*footer-section*/
@@ -549,34 +652,111 @@
 		width: fit-content;
 		margin: 0 auto;
 		gap: 8px;
+	}
+
+	.homes__col:nth-child(2) {
 		padding: unset;
 	}
 
-	.homes__photo {
+	.homes__col__photo {
 		max-width: 156px;
 		aspect-ratio: 1 / 1;
 	}
 
 	.arrow-mob {
-		display: unset;
-	}
-
-	.arrow:after {
-		width: 7px;
-		height: 7px;
-		right: -3px;
-		top: calc(50% - 4.5px);
-	}
-
-	.arrow:before {
 		width: 28px;
 		height: 28px;
-		top: calc(50% - 14px);
+		display: unset;
 		right: -14px;
+		top: calc(50% - 14px);
 	}
 
-	.country {
-		margin-top: -4px;
+	.homes__caption {
+		padding-top: -4px;
+	}
+
+	/*destinations-section*/
+
+	.destination__controls {
+		justify-content: space-between;
+		background-color: unset;
+		width: unset;
+	}
+
+	.destination__controls__btn {
+		width: 33.3%;
+		max-width: 98px;
+		font-size: 19px;
+		background-color: var(--white);
+		padding: 5px 15px;
+		border: 1px solid var(--stroke-colour);
+		line-height: 23px;
+	}
+
+	.destination__controls__btn-desc {
+		display: none;
+	}
+
+	.destination__col:nth-child(n + 3) {
+		display: none;
+	}
+
+	.destination__col {
+		width: fit-content;
+	}
+
+	.destination__col:nth-child(2) {
+		padding-right: unset;
+	}
+
+	.destination__col-arrow {
+		position: relative;
+	}
+
+	.destination__col__img {
+		max-width: 156px;
+		width: 100%;
+		max-height: 156px;
+		height: 100%;
+	}
+
+	.destinations-caption {
+		font-size: 12px;
+		padding-top: 8px;
+	}
+
+	.destination__img__expand {
+		display: none;
+	}
+
+	.login {
+		display: none;
+	}
+
+	.login-mob {
+		font-size: 12px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.login__logo {
+		fill: var(--white);
+		position: relative;
+		background-color: var(--accent-blue);
+		padding: 23px 3px;
+		border-radius: 4px;
+	}
+
+	.cross-login {
+		padding: unset;
+	}
+
+	.login-mob-install {
+		font-size: 14px;
+		padding: 45px 0;
+		color: #383838;
 	}
 
 	/*footer-section*/
