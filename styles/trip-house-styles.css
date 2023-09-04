@@ -413,7 +413,6 @@
 	transform: rotate(0deg);
 }
 
-
 .login {
 	display: flex;
 	background-color: var(--bg-colour);
@@ -739,6 +738,7 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 16px;
+		color: var(--text-main);
 	}
 
 	.login__logo {
@@ -755,8 +755,9 @@
 
 	.login-mob-install {
 		font-size: 14px;
+		font-weight: 500;
 		padding: 45px 0;
-		color: #383838;
+		color: var(--accent-blue);
 	}
 
 	/*footer-section*/
