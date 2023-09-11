@@ -413,7 +413,20 @@
 	transform: rotate(0deg);
 }
 
+/*reviews-section*/
+
+.reviews {
+	font-size: 24px;
+	color: var(--text-main);
+	font-weight: 500;
+}
+
 .login {
+	position: relative;
+	top: 0;
+}
+
+.login-desktop {
 	display: flex;
 	background-color: var(--bg-colour);
 	justify-content: space-between;
@@ -450,6 +463,7 @@
 .login-mob {
 	display: none;
 }
+
 
 /*footer-section*/
 
@@ -728,7 +742,22 @@
 		display: none;
 	}
 
+	/*reviews-section*/
+
+	.reviews {
+		display: flex;
+		flex-flow: wrap;
+	}
+
+	.block {
+		order: 1;
+	}
+
 	.login {
+		order: 2;
+	}
+
+	.login-desktop {
 		display: none;
 	}
 
