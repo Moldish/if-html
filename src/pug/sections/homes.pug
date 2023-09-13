@@ -1,0 +1,54 @@
+mixin homes
+  section.homes
+    .container
+      h2.title Homes guests loves
+      .homes__row
+        figure.homes__col.col-4
+          .homes__col__photo
+            img.homes__col__photo-png(
+              src=require('../../assets/images/homes/hotel-leopold.png'),
+              height='',
+              width='',
+              alt='hotel-leopold.png'
+            )
+          figcaption Hotel Leopold
+          figcaption.homes__caption
+            | Saint Petersburg, Russia
+        figure.homes__col.col-4
+          .homes__col__photo
+            img.homes__col__photo-png(
+              src=require('../../assets/images/homes/apartment-sunshine.png'),
+              height='',
+              width='',
+              alt='apartment-sunshine.png'
+            )
+            .arrow.arrow-mob
+              svg.arrow-svg.arrow-mob(width='28', height='28')
+                use(href='#arrow')
+          figcaption Apartment Sunshine
+          figcaption.homes__caption
+            | Santa Cruz de Tenerife, Spain
+        figure.homes__col.col-4
+          .homes__col__photo
+            img.homes__col__photo-png(
+              src=require('../../assets/images/homes/villa-kunerad.png'),
+              height='',
+              width='',
+              alt='villa-kunerad.png'
+            )
+          figcaption Villa Kunerad
+          figcaption.homes__caption
+            | Vysokie Tatry, Slowakia
+        figure.homes__col.col-4
+          .homes__col__photo
+            img.homes__col__photo-png(
+              src=require('../../assets/images/homes/hostel-friendship.png'),
+              height='',
+              width='',
+              alt='hostel-friendship.png'
+            )
+            .arrow
+              svg.arrow-svg(width='48', height='48')
+                use(href='#arrow')
+          figcaption Hostel Friendship
+          figcaption.homes__caption Berlin, Germany

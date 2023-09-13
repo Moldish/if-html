@@ -1,0 +1,19 @@
+include ./page-info
+include ../sections/main
+include ../sections/offerings
+include ../sections/homes
+include ../sections/destinations
+include ../sections/reviews
+include ../sections/footer
+include ../../assets/svg-sprite
+
+- var pageInfo = { title: 'TripHouse' };
+
++page(pageInfo)
+  +svg-sprite
+  +main
+  +offerings
+  +homes
+  +destinations
+  +reviews
+  +footer
