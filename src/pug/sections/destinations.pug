@@ -1,0 +1,65 @@
+mixin destinations
+  section.destinations
+    .container
+      h2.title The best destinations
+      .destination__controls
+        button.destination__controls__btn(type='submit', autofocus='')
+          | Regions
+        button.destination__controls__btn(type='submit')
+          | Cities
+        button.destination__controls__btn(type='submit')
+          | Places&ensp;
+          span.destination__controls__btn-desc
+            | of interest
+      .destination__row
+        figure.destination__col.col-4
+          .destination__col__img
+            img.destination__img-filter(
+              src=require('../../assets/images/destinations/maldives.png'),
+              height='',
+              width='',
+              alt='maldives.png'
+            )
+            button.destination__img__btn(type='submit')
+              | Book now
+          figcaption.destinations-caption Maldives
+        figure.destination__col.col-4
+          .destination__col-arrow.destination__col__img
+            img.destination__img-filter(
+              src=require('../../assets/images/destinations/spain.png'),
+              height='',
+              width='',
+              alt='spain.png'
+            )
+            button.destination__img__btn(type='submit')
+              | Book now
+            .arrow.destination__arrow
+              svg.arrow-svg(width='28', height='28')
+                use(href='#arrow')
+          figcaption.destinations-caption Spain
+        figure.destination__col.col-4
+          .destination__col__img
+            img.destination__img-filter(
+              src=require('../../assets/images/destinations/norway.png'),
+              height='',
+              width='',
+              alt='norway.png'
+            )
+            button.destination__img__btn(type='submit')
+              | Book now
+          figcaption.destinations-caption Norway
+        figure.destination__col.col-4
+          .destination__col__img
+            img.destination__img-filter(
+              src=require('../../assets/images/destinations/island.png'),
+              height='',
+              width='',
+              alt='island.png'
+            )
+            button.destination__img__btn(type='submit')
+              | Book now
+          figcaption.destinations-caption Island
+      .destination__img__expand
+        .arrow
+          svg.arrow-svg.arrow-destination(width='48', height='49')
+            use(href='#arrow')
