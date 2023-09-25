@@ -1,4 +1,6 @@
 .offerings {
+  padding-bottom: 120px;
+
   &__row {
     flex-wrap: wrap;
   }
@@ -30,10 +32,6 @@
   .offerings {
     padding-bottom: 40px;
 
-    &__col:not(:last-child) {
-      padding-bottom: 32px;
-    }
-
     &__img {
       height: 70px;
       width: 70px;
@@ -47,5 +45,10 @@
       padding: 16px 0 0;
       font-size: 15px;
     }
+  }
+
+  .align-items-start {
+    flex-direction: column;
+    gap: 16px;
   }
 }
